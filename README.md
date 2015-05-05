@@ -1,44 +1,31 @@
 # Medieval
-Eight segmentations on MICCAI 2009 LV Grand Challenge
+### Eight segmentations on MICCAI 2009 LV Grand Challenge  
 
-Organization of the directory Segmentations-LV:
+#### Organization of the directory Segmentations-LV:  
+45 subdirectories, one per subject.  
+Naming of subject is similar to the MICCAI 2009 LV Grand Challenge database: SC-\*-XY   
+(XY being two digits, \* corresponding to subject subcategory: N, HYP, HF-I, HF-NI). 
 
-45 subdirectories, one per subject
+For each subject, there are eight subdirectories corresponding to eight segmentation methods: method01, method02, method03, method04, method05, method06, method07, method08.   
+The eight methods are described in the paper submitted to Plos One.  
+Inside each subdirectory there are two files: Cav_seg_SC-\*-XY_methode0Z (a text file describing the binary data) and Cav_seg_SC-\*-XY_methode0Z.dat.gz (gzip of the binary data).
 
-Naming of subject is similar to the MICCAI 2009 LV Grand Challenge database: 
+#### Example of files:   
+The text file Cav_seg_SC-HF-I-04_methode01 describes the 4D dataset corresponding to the labeling of the left ventricle of subject SC-HF-I-04 by method01.
 
-(SC-*-XY, XY being two digits, * corresponding to subject subcategory: N, HYP, HF-I, HF-NI). 
+!width := 256             (First dimension of image slice)  
+!height := 256            (Second dimension of image slice)  
+!slice_number := 10       (Number of slices for this specific dataset)  
+!phase_number := 20       (Number of time samples for this 4D data set)  
+!number format := unsigned integer (Format of label : unsigned integer)  
+!number of bytes per pixel := 1    (Format of label : one byte per element)  
+!filenumber := 1          (Format of 4D data set : only one file)  
+!name of data file[1] := Cav_seg_SC-HF-I-04_methode01.dat (Name of the data file)  
 
-For each subject, eight subdirectories corresponding to eight segmentation methods: method01, method02, method03, method04, method05, method06, method07, method08
-
-Inside each subdirectory two files: Cav_seg_SC-*-XY_methode0Z (a text file describing the binary data) and Cav_seg_SC-*-XY_methode0Z.dat.gz (a gzip version of the binary data)
-
-Example of text file : Cav_seg_SC-HF-I-04_methode01 describing the 4D dataset corresponding to labeling of left ventricle of subject SC-HF-I-04 (additional comments are inside ())
-
-!width := 256                                                    (First dimension of image slice)
-
-!height := 256                                                   (Second dimension of image slice)
-
-!slice_number := 10                                              (Number of slices for this specific dataset)
-
-!phase_number := 20                                              (Number of time samples for this 4D data set)
-
-!number format := unsigned integer                               (Format of label : unsigned integer)
-
-!number of bytes per pixel := 1                                  (Format of label : one byte per element)
-
-!filenumber := 1                                                 (Format of 4D data set : only one file)
-
-!name of data file[1] := Cav_seg_SC-HF-I-04_methode01.dat        (Name of the data file)
-
-When decompressed Cav_seg_SC-HF-I-04_methode01.dat is a 4D dataset (size : 256x256x10x20) of unsigned bytes with three possible values: 
-
-- 0 for background
-
-- 1 for left ventricle 
-
-- 255 for unsegmented slices
-
+When decompressed, Cav_seg_SC-HF-I-04_methode01.dat is a 4D dataset (size: 256x256x10x20 voxels) of unsigned bytes with three possible values: 
+* 0 for background
+* 1 for left ventricle 
+* 255 for unsegmented slices
 
 NB The two label values 0 or 1 occur only for segmented slices.
 
