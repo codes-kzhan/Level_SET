@@ -1,0 +1,8 @@
+!width := 256
+!height := 256
+!slice_number := 11
+!phase_number := 20
+!number format := unsigned integer
+!number of bytes per pixel := 1
+!filenumber := 1
+!name of data file[1] := Cav_seg_SC-HF-I-06_methode01.dat
