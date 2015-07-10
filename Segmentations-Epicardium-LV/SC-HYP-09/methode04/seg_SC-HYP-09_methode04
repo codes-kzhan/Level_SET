@@ -1,0 +1,11 @@
+!width:= 256 
+!height:= 256 
+!slice_number:= 12 
+!phase_number:= 20 
+!number format:= unsigned integer 
+!number of bytes per pixel:= 1 
+!filenumber:= 1 
+!name of data file[1]:= seg_SC-HYP-09_methode04.dat 
+!interslice_distance:= 10 
+!width_resolution:= 1.367190 
+!height_resolution:= 1.367190 
